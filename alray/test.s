@@ -1,34 +1,34 @@
-##
-## print “hello world”
-##  programed by：stevie zou
-##
+    ##
+    ## print “hello world”
+    ##  programed by：stevie zou
+    ##
 
-#########################################
+    #########################################
 
-#  text segment       #
+    #  text segment       #
 
-#########################################
+    #########################################
 
-   .text
-        .globl main
-main:
-    
-     la $a0,str    #$a0储存要打印字符的地址
-     li $v0, 4     #为syscall读取整数值
-     syscall       #system call service 4  打印字符串
+.text   
+        .globl  main
+main:   
 
-     li $v0,10
-     syscall       #system call service 10 退出
-            
-#########################################
+    la      $a0,    str         #$a0储存要打印字符的地址
+    li      $v0,    4           #为syscall读取整数值
+    syscall                     #system call service 4  打印字符串
 
-#   data segment      #
+    li      $v0,    10
+    syscall                     #system call service 10 退出
 
-#########################################
+    #########################################
 
-    .data
-str: .asciiz "hello world"
+    #   data segment      #
+
+    #########################################
+
+.data   
+str:    .asciiz "hello world"
 
 
-##
-############end of file
+    ##
+    ############end of file

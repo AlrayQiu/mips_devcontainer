@@ -4,3 +4,5 @@
 > 找个心仪的位置运行 ```git clone -b environment https://github.com/MSVCM/mips_devcontainer.git && code mips_devcontainer``` 
 
 > ```f1```,"reopen in dev container",挂个梯子，等他一会，之后就是编写.s文件，然后 ```f5``` 运行
+
+> 如果实在很想看着寄存器写，运行mars.sh

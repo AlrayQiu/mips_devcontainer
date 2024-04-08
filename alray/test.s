@@ -9,16 +9,10 @@
 
     #########################################
 
-.text   
-        .globl  main
-main:   
+.text
+    .globlmain
+main:
 
-    la      $a0,    str         #$a0储存要打印字符的地址
-    li      $v0,    4           #为syscall读取整数值
-    syscall                     #system call service 4  打印字符串
-
-    li      $v0,    10
-    syscall                     #system call service 10 退出
 
     #########################################
 
@@ -26,8 +20,8 @@ main:
 
     #########################################
 
-.data   
-str:    .asciiz "hello world"
+.data
+
 
 
     ##

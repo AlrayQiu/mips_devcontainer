@@ -14,7 +14,8 @@
 				"kdarkhan.mips",
 				"AngaBlue.asm-formatter",
 				"MS-CEINTL.vscode-language-pack-zh-hans",
-				"akainth015.marscode"
+				"akainth015.marscode",
+				"roadkillco.dashmips-debugger"
 			],
 			"keybindings": [
 				{

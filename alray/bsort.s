@@ -28,7 +28,7 @@ loop:
     beq     $t1,    $t2,        loop        # if $t1 == $t0 then goto target
 
 
-    subi    $t2,    $t1,        8           # $t1 = $t1 - 1
+    addi    $t2,    $t1,        -8          # $t1 = $t1 - 1
 sort:   
 
 
@@ -50,7 +50,7 @@ sort:
 
     lw      $t3,    0($t1)
     sw      $t3,    0($t2)
-    subi    $t2,    $t2,        4           # $t2 = $t2 - 4
+    addi    $t2,    $t2,        -4          # $t2 = $t2 - 4
 
     j       sort
 
@@ -59,7 +59,7 @@ endsort:
     j       loop
 
 endloop:
-    subi    $t1,    $t1,        4           # $t1 = $t1 - 4
+    addi    $t1,    $t1,        -4          # $t1 = $t1 - 4
 
     la      $t3,    arr,        #
 print:  

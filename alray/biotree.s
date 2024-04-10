@@ -14,7 +14,6 @@ input:
     j       input
 
 endinput:
-
     la      $t2,    tree
     li      $t1,    1
     lw      $t4,    0($t2)
@@ -74,14 +73,14 @@ search:
     addi    $t2,    $t2,        4           # $t2 = $t2 + 1
 
     add     $t2,    $t2,        $t2         # $t2, *, $t1, =, Hi, and, Lo, registers
-    subi    $t2,    $t2,        4           # $t3 = $t3 - 4
+    addi    $t2,    $t2,        -4          # $t3 = $t3 - 4
 
     add     $t2,    $t2,        $t0
 
 
     lw      $t4,    0($t2)
     beqz    $t4,    re
-    subi    $sp,    $sp,        12
+    addi    $sp,    $sp,        -12
     sw      $t1,    0($sp)
     sw      $ra,    4($sp)
     sw      $t2,    8($sp)
@@ -99,7 +98,7 @@ re:
 
     lw      $t4,    4($t2)
     beqz    $t4,    ret
-    subi    $sp,    $sp,        8
+    addi    $sp,    $sp,        -8
     sw      $t1,    0($sp)
     sw      $ra,    4($sp)
     addi    $t1,    $t2,        4

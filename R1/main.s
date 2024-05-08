@@ -197,8 +197,6 @@ endnext_prime:
     #       
     # search next primes when n < primes_set[T],use bio_search
 bio_search:                                                         # v0:PN bio_search(a0:N,a1:l,a2:r) l is pointer of left,r is pointer of right
-    addi    $sp,                $sp,                -4              #alloc and push
-    sw      $ra,                0($sp)
     li      $t1,                2
 bioloop:    
     bgt     $a1,                $a2,                endbio_search   # if $a1 > $a2   then goto target
@@ -214,8 +212,6 @@ bioless:
     j       bioloop
 endbio_search:
     lhu     $v0,                0($a1)                              #  $v0 = *a1
-    lw      $ra,                0($sp)                              # pop and free
-    addi    $sp,                $sp,                4
     jr      $ra
     #end bio_search ========================================
 

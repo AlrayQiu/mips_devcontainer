@@ -153,12 +153,10 @@ cpnotprime:                                                         # else conti
     syscall                                                         # execute
 notwatchdog:
     #===
-
     addiu   $t0,                $t0,                2
     blt     $t2,                $t0,                endcploop
     j       cploop
 endcploop:  
-endcreate_primes:
     lw      $ra,                0($sp)                              # pop and free
     addi    $sp,                $sp,                4
     la      $v0,                primes
